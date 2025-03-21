@@ -1,21 +1,31 @@
-@extends('layout.app')
-{{--costumize layout sections--}}
+@extends('adminlte::page')
 
-@section('subtitle', 'welcome')
-@section('content_header_title', 'Home')
-@section('content_header_subtitle','Welcome')
+@section('title', 'Dashboard')
 
-@section('content_body')
-<p>Welcome to this beatufiul admin panel</p>
-@endsection
-{{--Push extra CSS--}}
+@section('content_header')
+    <h1>Dashboard</h1>
+@stop
 
-@push('css')
-    {{--add extra stylesheets--}}
-    {{--<link rel="stylesheet" href="/css/admin_custom.css">--}}
-@endpush
-{{--push extra script--}}
+@section('content')
 
-@push('js')
-<script>console.log("hi, im using the laravel AdminLTE package!")</script>
-@endpush
+    <div class="card-body">
+        <form>
+          <div class="row">
+            <div class="col-sm-6">
+              <!-- text input -->
+              <div class="form-group">
+      <label>Level id</label><input type="text" class="form-control" placeholder="id">
+                <div>
+              </div>
+              <button type = "submit" class ="btn btn-info">Submit </button>
+            </div>
+@stop
+
+@section('css')
+    {{-- Add here extra stylesheets --}}
+    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+@stop
+
+@section('js')
+    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+@stop
